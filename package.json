@@ -1,0 +1,44 @@
+{
+  "name": "ngx-prevent-scroll",
+  "version": "0.1.0",
+  "description": "A simple angular directive that allows to prevent an element from scrolling whenever the user is focusing (mouseenter / touchstart) the element where this directive was applied.",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "dependencies": {
+    "@angular/core": "^2.4.6",
+    "rxjs": "^5.0.0-beta.12"
+  },
+  "devDependencies": {
+    "@angular/cli": "^1.0.0-rc.0",
+    "@angular/compiler": "^2.4.6",
+    "@angular/compiler-cli": "^2.4.6",
+    "chai": "^3.5.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-shell": "^0.5.2",
+    "gulp-sourcemaps": "^2.4.0",
+    "gulp-typescript": "^3.1.4",
+    "merge2": "^1.0.2",
+    "typescript": "2.0.10"
+  },
+  "scripts": {
+    "build": "gulp clean-ts && node_modules/.bin/ngc -p tsconfig.json",
+    "push": "npm publish && git add . && git commit -m $(node -pe 'JSON.parse(process.argv[1]).version' \"$(cat package.json)\") && git push origin master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergiocarneiro/ngx-prevent-scroll.git"
+  },
+  "keywords": [
+    "angular",
+    "directive",
+    "scroll"
+  ],
+  "author": "Sérgio Carneiro <sergio.carneiro21@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sergiocarneiro/ngx-prevent-scroll/issues"
+  },
+  "homepage": "https://github.com/sergiocarneiro/ngx-prevent-scroll#readme"
+}
