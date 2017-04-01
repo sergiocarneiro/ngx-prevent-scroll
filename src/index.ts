@@ -47,7 +47,10 @@ export class PreventScrollDirective implements AfterViewChecked, OnChanges {
     }
 
     private onLeave() {
-        this.target.style.overflow = "auto";
+        // Touch scrolls propragate after the touch ends, so wait a little to re-enable scroll
+        setTimeout(() =>
+            this.target.style.overflow = "auto"
+        , 300);
     }
 
     private updateTarget() {
