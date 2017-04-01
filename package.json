@@ -1,6 +1,6 @@
 {
   "name": "ngx-prevent-scroll",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A simple angular directive that allows to prevent an element from scrolling whenever the user is focusing (mouseenter / touchstart) the element where this directive was applied.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
